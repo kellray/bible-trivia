@@ -2,6 +2,9 @@
   "name": "bible-trivia",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json -r tsconfig-paths/register server.ts",
     "build": "next build",
