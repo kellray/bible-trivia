@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f0f1a;
+  --blue-team: #3B82F6;
+  --red-team: #EF4444;
+}
+
+body {
+  background-color: var(--bg);
+  color: #f1f5f9;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Countdown ring animation */
+@keyframes countdown {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: 283; } /* 2πr where r=45 */
+}
+
+.countdown-ring {
+  animation: countdown linear forwards;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+/* Buzz button pulse */
+@keyframes buzz-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+  50%       { box-shadow: 0 0 0 30px rgba(255,255,255,0); }
+}
+
+.buzz-active {
+  animation: buzz-pulse 1.2s ease-in-out infinite;
+}

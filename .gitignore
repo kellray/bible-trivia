@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# environment variables
+.env.local
+.env*.local
+
+# Next.js
+.next/
+out/
+
+# production build
+build/
+
+# misc
+.DS_Store
+*.pem
