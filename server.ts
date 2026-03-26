@@ -168,7 +168,8 @@ function nextRound(io: Server, roomCode: string) {
 
 // ── HTTP + Next.js app ────────────────────────────────────────
 async function main() {
-  const app = next({ dev, hostname: 'localhost', port });
+  const hostname = process.env.HOSTNAME ?? '0.0.0.0';
+  const app = next({ dev, hostname, port });
   const handle = app.getRequestHandler();
   await app.prepare();
 
